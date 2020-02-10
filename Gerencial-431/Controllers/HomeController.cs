@@ -6,21 +6,27 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Gerencial_431.Models;
+using AppGerencial.Application.Interface;
+using AppGerencial.Application.ViewModels;
 
 namespace Gerencial_431.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly ITipoAppService _tipoAppService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger ,  ITipoAppService tiposervice )
         {
-            _logger = logger;
+            _tipoAppService = tiposervice; 
+                  _logger = logger;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var r = _tipoAppService.SelectAll() ;
+            return View(r);
+
         }
 
         public IActionResult Privacy()

@@ -4,9 +4,9 @@ using System.Text;
 
 namespace AppGerencial.Domain.Entities
 {
-    public class Retorno
+    public class EntitySistema
     {
-        public Retorno(int id, string nome, string descricao)
+        public EntitySistema(int id, string nome, string descricao)
         {
             Id = id;
             Nome = nome;
@@ -17,4 +17,5 @@ namespace AppGerencial.Domain.Entities
         string Nome { get; set; }
         string Descricao { get; set; }
     }
+
 }

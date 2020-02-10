@@ -4,9 +4,9 @@ using System.Text;
 
 namespace AppGerencial.Domain.Entities
 {
-    public class Tipo
+    public class EntityRetorno
     {
-        public Tipo(int id, string nome, string descricao)
+        public EntityRetorno(int id, string nome, string descricao)
         {
             Id = id;
             Nome = nome;

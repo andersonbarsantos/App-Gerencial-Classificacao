@@ -5,9 +5,9 @@ using System.Text;
 namespace AppGerencial.Domain.Entities
 {
 
-    public class Situacao
+    public class EntitySituacao
     {
-        public Situacao(int id, string nome, string descricao)
+        public EntitySituacao(int id, string nome, string descricao)
         {
             Id = id;
             Nome = nome;
